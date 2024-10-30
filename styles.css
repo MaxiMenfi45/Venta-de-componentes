@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
+
 
 .header-contenedor{
     display: flex;
@@ -12,10 +14,18 @@
     font-size: 20px;
     width: 100%;
     height: 100px;
-    background-color: red;
     align-items: center;
     font-size: 30px;
     position: fixed;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(/circuito3.avif);
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    
+ 
     
 }
 .header-contenedor>div>img{
@@ -27,8 +37,158 @@
     flex-direction: row;
     gap: 2em;
     list-style: none;
-    border:5px solid black;
     font-size: 1em;
   
 }
+.productos-destacados{
+    width: 100%;
+    height: 500px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
 
+    
+}
+.productos-destacados>p{
+
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    border: 1px solid blue;
+    padding: 40px;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    overflow-y: hidden;
+    
+}
+
+.productos-destacados>div{
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.productos-destacados>div>img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.todos-productos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+#div-parrafo-todos-productos{
+    display: block;
+    width: 100%;
+    height: 50px;
+   display: flex;
+    border: 1px solid salmon;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#div-todos-productos{
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(3,auto);
+    gap: 5px;
+    grid-template-areas:
+    "ram .  placa  "
+    " . procesador ."
+    " silla  . disco" 
+    ;
+    padding: 10px;
+}
+.alineado{
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.procesador{
+    grid-area: procesador;
+}
+.ram{
+    grid-area: ram;
+}
+.disco{
+    grid-area: disco;
+}
+.silla{
+    grid-area: silla;
+}
+.placa{
+    grid-area: placa;
+}
+
+.todos-productos>div>img{
+    width: 170px;
+    height: 170px;
+}
+
+.espaciador{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+.section-varios{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    height: 150px;
+    width: 100%;
+}
+.section-varios>div>p{
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.links-varios>i{
+   
+    font-size: 50px;
+}
+.links-varios{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+}
+
+.footer{
+    margin-top:20px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+
+}
