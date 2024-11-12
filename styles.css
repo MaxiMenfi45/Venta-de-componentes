@@ -1,13 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: whitesmoke;
-  
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000;
+}
+
+a:hover {
+    color: rgb(43, 255, 0);
+}
+
+a:active {
+    color: blue;
+}
+
+#motherboard_dest:hover {
+    filter: blur(1px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.producto>p:hover{
+    opacity: 1;
 }
 
 
-.header-contenedor{
+
+.header-contenedor {
     display: flex;
     padding: 10px;
     margin: 0;
@@ -22,72 +48,91 @@
     font-weight: 400;
     font-style: normal;
     background-image: url(/circuito3.avif);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
-    
- 
-    
+    z-index: 1;
 }
-.header-contenedor>div>img{
+
+.header-contenedor > div > img {
     height: 85px;
     width: 85px;
 }
-.header-contenedor>nav>ul{
+
+.header-contenedor > nav > ul {
     display: flex;
     flex-direction: row;
     gap: 2em;
     list-style: none;
     font-size: 1em;
-  
 }
-.productos-destacados{
-    width: 100%;
-    height: 500px;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
 
-    
-}
-.productos-destacados>p{
-
+.productos-destacados {
     width: 100%;
     text-align: center;
-    height: 50px;
-    border: 1px solid blue;
-    padding: 40px;
+    padding-top: 100px;
+    height: auto;
+}
+
+.productos-destacados > p {
     font-size: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 800;
-    font-style: normal;
-    text-align: center;
-    overflow-y: hidden;
-    
+    margin-bottom: 20px;
 }
 
-.productos-destacados>div{
+.imagenes-destacadas {
     display: flex;
-    gap: 100px;
-    width: 100%;
-    height: 400px;
-    align-items: center;
     justify-content: center;
-    
-
+    gap: 50px;
+    flex-wrap: wrap;
 }
-.productos-destacados>div>img{
+.imagenes-destacadas>div>p{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+}
+.imagenes-destacadas>div>p:hover{
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.producto {
+    position: relative;
     width: 200px;
-    height: 200px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
     border: 5px solid black;
     border-radius: 20px;
-    margin-top: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.todos-productos{
+.producto:hover img {
+    filter: blur(1px);
+}
+
+.producto p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.todos-productos {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -96,76 +141,78 @@
     border: 1px solid blue;
 }
 
-#div-parrafo-todos-productos{
-    display: block;
+#div-parrafo-todos-productos {
+    display: flex;
     width: 100%;
     height: 50px;
-   display: flex;
-    border: 1px solid salmon;
     align-items: center;
     justify-content: center;
     font-size: 25px;
     font-family: "Roboto", sans-serif;
     font-weight: 800;
     font-style: normal;
+    border: 1px solid salmon;
 }
 
-#div-todos-productos{
+#div-todos-productos {
     margin-top: 20px;
     display: grid;
     align-items: center;
     justify-content: center;
     width: 100%;
-    grid-template-columns: repeat(3,150px);
-    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, auto);
     gap: 5px;
     grid-template-areas:
-    "ram .  placa  "
-    " . procesador ."
-    " silla  . disco" 
-    ;
+        "ram . placa"
+        ". procesador ."
+        "silla . disco";
     padding: 10px;
-
 }
-.alineado{
+
+.alineado {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
 }
-.procesador{
+
+.procesador {
     grid-area: procesador;
 }
-.ram{
+
+.ram {
     grid-area: ram;
 }
-.disco{
+
+.disco {
     grid-area: disco;
 }
-.silla{
+
+.silla {
     grid-area: silla;
 }
-.placa{
+
+.placa {
     grid-area: placa;
 }
 
-.todos-productos>div>img{
+.todos-productos > div > img {
     width: 170px;
     height: 170px;
     padding: 10px;
     border: 5px solid black;
     border-radius: 10px;
-  
 }
 
-.espaciador{
+.espaciador {
     height: 50px;
     width: 100%;
     background-color: black;
 }
 
-.section-varios{
+.section-varios {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -173,43 +220,42 @@
     height: 150px;
     width: 100%;
 }
-.section-varios>div>p{
+
+.section-varios > div > p {
     font-size: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.links-varios>i{
-   
+.links-varios > i {
     font-size: 50px;
 }
-.links-varios{
+
+.links-varios {
     display: flex;
     gap: 20px;
     height: 50px;
 }
 
-.footer{
-    margin-top:20px;
+.footer {
+    margin-top: 20px;
     height: 30px;
     width: 100%;
     text-align: center;
     font-size: 20px;
-
 }
 
-
-#inicio{
+#inicio {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     padding-top: 120px;
     align-items: center;
-   
 }
-#inicio>div{
+
+#inicio > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,10 +263,9 @@
     height: auto;
     padding-top: 50px;
     gap: 30px;
-    
 }
 
-#inicio>div>img{
+#inicio > div > img {
     flex-basis: 33%;
     border: 1px solid red;
     min-width: 300px;
@@ -229,4 +274,34 @@
     max-height: 300px;
     border: 2px solid blue;
     border-radius: 30px;
+}
+
+#contacto>form{
+    width: 100%;
+    height: 300px;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contacto>input,textarea,button{
+    display: block;
+}
+#contacto input, 
+#contacto button {
+    width: 100%;
+    max-width: 300px; 
+    padding: 8px;
+    margin-bottom: 10px; 
+    height: auto;
+}
+#contacto textarea{
+    width: 100%;
+    max-width: 300px; 
+    padding: 8px;
+    margin-bottom: 10px; 
+    height: auto;
+    min-height: 50px;
+
 }
